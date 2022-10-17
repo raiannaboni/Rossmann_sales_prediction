@@ -45,7 +45,7 @@ As variáveis do dataset original são as seguintes:
 | promo2_since_year |	ano no qual a loja entrou em Promo2
 | promo_interval |	meses do ano nos quais Promo2 é iniciada (ex: "Feb,May,Aug,Nov")
 
-As variáveis criadas na dase de "feature engineering" foram as seguintes:
+As variáveis criadas na fase de "feature engineering" foram as seguintes:
 
 | Variável | Definição |
 | --- | --- |
