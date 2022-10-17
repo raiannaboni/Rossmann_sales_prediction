@@ -61,6 +61,96 @@ As variáveis criadas na dase de "feature engineering" foram as seguintes:
 
 ## 4. Estratégia de solução
 
+O projeto foi desenvolvido seguindo o método CRISP-DS (Cross-Industry Standard Process - Data Science).
+
+``` mermaid
+journey
+  title Sequência de passos
+  section CRISP-DS
+    
+    Data Description: 5: Me
+    Feature Engineering: 5: Me
+    Data Filtering: 5: Me
+    Exploratory Data Analysis: 5: Me
+    Data Preparation: 5: Me
+    Feature Selection: 5: Me
+    Machine Learning Modeling: 5: Me
+    Hyper Parameter Fine Tuning: 5: Me
+    Model-to-Business Interpretation: 5: Me
+    Model Deploy: 5: Me
+
+```
+
+## 5. Os 3 principais insights extraídos dos dados
+
+**1. Lojas com competidores mais próximos vendem menos**
+
+**Falso** - Lojas com competidores mais próximos vendem mais.
+
+![competition_distance](https://user-images.githubusercontent.com/102910250/196230219-c069d401-8bd6-45ec-a036-bd24f455e96f.png)
+
+
+**2. Lojas vendem mais no segundo semestre do ano**
+
+**Falso** - Lojas vendem menos no segundo semestre do ano.
+
+![semestre](https://user-images.githubusercontent.com/102910250/196231192-b4d79d76-e6b6-4424-9499-0688cec3108f.png)
+
+
+**3. Lojas vendem mais depois do dia 10 de cada mês**
+
+**Verdadeiro** - Lojas vendem mais depois do dia 10 de cada mês 
+
+![after_before](https://user-images.githubusercontent.com/102910250/196231601-2142bea1-7ccb-4ac4-b858-7d6ebf42f889.png)
+
+
+## 6. Modelo de Machine Learning
+
+Foram testados os seguintes modelos de ML: 
+
+- Regressão linear
+- Regressão linear regularizada (Lasso)
+- Random Forest regressor
+- XGBoost regressor
+
+Esses foram os resultados após o Cross-Validation (MAE = mean absolute error; MAPE = mean absolut percentage error; RSME = root mean squared error):
+
+![Captura de tela de 2022-10-17 13-31-26](https://user-images.githubusercontent.com/102910250/196232607-a66762b2-237a-4f17-9ebd-40ee10677741.png)
+
+
+O modelo selecionado foi o XGBoost e os resultados após o hypertuning são os seguintes:
+
+![Captura de tela de 2022-10-17 13-33-32](https://user-images.githubusercontent.com/102910250/196232998-31d7d916-44a4-4390-99c2-1f43d9ccc745.png)
+
+Performance total:
+
+![Captura de tela de 2022-10-17 13-35-27](https://user-images.githubusercontent.com/102910250/196233630-ba3ebd9b-ec60-44ba-a8b7-0924dcb81304.png)
+
+
+## 7. Bot do Telegram
+
+As predições de vendas de cada loja para as próximas 6 semanas são entregues via bot do [Telegram](http://t.me/rossmann_raianna_bot) (Clique em Telegram para acessar o bot).
+
+![WhatsApp Image 2022-10-17 at 13 38 34](https://user-images.githubusercontent.com/102910250/196234433-75d7f96c-78f7-4eb3-afe4-b1aa202c5fa8.jpeg)
+
+## 8. Conclusão
+
+O objetivo do presente projeto foi desenvolver um modelo de predição de vendas para as lojas Rossmann, e o projeto foi entregue ao CFO da empresa na forma de um bot do Telegram, onde podemos acessar o faturamento de cada empresa individualmente de forma rápida e eficaz.
+
+## 9. Próximos passos
+
+Seguindo o métido CRISP-DS, melhorias podem ser realizadas no modelo.
+
+- Criar novas variáveis que podem melhorar a performance do modelo.
+- Testar outros modelos de Machine Learning com melhor performance.
+- Melhorar a reposta do bot do Telegram.
+
+## 10. Referências
+
+- Este projeto faz parte do módulo Data Science em Produção, da [Comunidade DS](https://comunidadeds.com/).
+- Os dados foram coletados no [Kaggle](https://www.kaggle.com/c/rossmann-store-sales/data).
+
+
 
 
 
